@@ -1,4 +1,4 @@
-# Yandex XML Search
+# Yandex XML Search Сlass
 
 PHP-класс для удобной работы с [Яндекс XML](https://xml.yandex.ru/)
 
