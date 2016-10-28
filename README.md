@@ -1,6 +1,6 @@
 # Yandex XML Search —lass
 
-PHP-класс дл€ удобной работы с [яндекс XML!](https://xml.yandex.ru/)
+PHP-класс дл€ удобной работы с [яндекс XML](https://xml.yandex.ru/)
 
 ```php
 $yxml = new yxml($user = '', $key = '', $cache = true, $cache_dir = '');
