@@ -16,33 +16,30 @@ $yxml = new yxml($user = '', $key = '', $cache = true, $cache_dir = '');
 
 ### getResult ($keyword, $geo)
 Получить результаты поиска по запросу $keyword в регионе $geo
+*Возвращаемое значение - string | bool*
 ```php
 $yxml->getResult($keyword = '', $geo = 213);
 ```
 * **$keyword** - ключевое слово *(string)*
 * **$geo** - ID региона *(int)*
 
-*Возвращаемое значение - string | bool*
-
 
 ### position ($domain, $xml_result)
 Получить позицию домена в поисковой выдаче
+*Возвращаемое значение - string | bool*
 ```php
 $yxml->position($domain = '', $xml_result = '');
 ```
 * **$domain** - имя домена *(string)*
 * **$xml_result** - кастомный xml результат *(string)*
 
-*Возвращаемое значение - string | bool*
-
 
 ### log()
 Получить лог работы класса для дебага
+*Возвращаемое значение - string*
 ```php
 $yxml->log();
 ```
-
-*Возвращаемое значение - string*
 
 
 ## TODO
