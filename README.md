@@ -15,22 +15,24 @@ $yxml = new yxml($user = '', $key = '', $cache = true, $cache_dir = '');
 
 ## Методы
 
-**getResult** - получить результаты поиска по запросу $keyword в регионе $geo
+### getResult
+Получить результаты поиска по запросу $keyword в регионе $geo
 ```php
 getResult($keyword = '', $geo = 213)
 ```
 * $keyword - ключевое слово (string)
 * $geo - ID региона (int)
 
-
-**position** - получить позицию домена в поисковой выдаче
+### position
+Получить позицию домена в поисковой выдаче
 ```php
 position($domain = '', $xml_result = '')
 ```
 * $domain - имя домена (string)
 * $xml_result - кастомный xml результат
 
-**log** - получить лог работы класса для дебага
+### log
+Получить лог работы класса для дебага
 ```php
 log()
 ```
