@@ -11,12 +11,13 @@ class yxml {
 
     private $user = '';
     private $key = '';
-    private $cache = false;
+    private $cache = true;
     private $cache_dir = '';
     private $log_array = array();
+    private $xml_result = '';
 
 
-    public function __construct($user = '', $key = '', $cache = false, $cache_dir = '') {
+    public function __construct($user = '', $key = '', $cache = true, $cache_dir = '') {
 
         // Delete space
         $user = trim($user);
@@ -113,7 +114,7 @@ class yxml {
                     // Save result to cache
                     if ($this->cache) {
                         file_put_contents($file, $res);
-
+                        $this->xml_result = $res;
                         $this->addLog('Save XML result to cache: "' . $file . '"');
                     }
 
@@ -139,6 +140,55 @@ class yxml {
         return false;
 
     }
+
+
+    /*
+     * Get domain position on search result
+     */
+    public function position($domain = '', $xml_result = '') {
+        $this->addLog('Search domain position in search results');
+
+        $domain = trim($domain);
+        $xml_result = trim($xml_result);
+
+        if (!empty($domain)) {
+            $this->addLog('Search domain: "' . $domain . '"');
+
+            if (empty($xml_result)) {
+                if (empty($this->xml_result)) {
+                    $this->addLog('XML results are empty');
+                    return false;
+                }
+
+                $xml_result = $this->xml_result;
+            }
+
+            $xml = simplexml_load_string($xml_result);
+
+            $position_counter = 1;
+            $domain_search = strtolower($domain);
+
+            foreach ($xml->response->results->grouping->group as $group)
+            {
+                $domain = strtolower($group->doc->domain);
+                if((strpos($domain, $domain_search)) or ($domain == $domain_search))
+                {
+                    $this->addLog('Domain found on #' . $position_counter . ' position');
+                    return $position_counter;
+                }
+                $position_counter++;
+            }
+
+            $this->addLog('Domain not found in search results');
+            return false;
+
+        } else {
+            $this->addLog('Domain name is empty');
+        }
+
+        return false;
+    }
+
 
 
     /*

@@ -1,9 +1,9 @@
-# YandexXMLSearch
+# Yandex XML Search
 
 PHP-класс для удобной работы с [Яндекс XML](https://xml.yandex.ru/)
 
 ```php
-$yxml = new yxml($user = '', $key = '', $cache = false, $cache_dir = '');
+$yxml = new yxml($user = '', $key = '', $cache = true, $cache_dir = '');
 ```
 
 ## Параметры:
@@ -22,6 +22,18 @@ getResult($keyword = '', $geo = 213)
 * $keyword - ключевое слово (string)
 * $geo - ID региона (int)
 
+
+**position** - получить позицию домена в поисковой выдаче
+```php
+position($domain = '', $xml_result = '')
+```
+* $domain - имя домена (string)
+* $xml_result - кастомный xml результат
+
+**log** - получить лог работы класса для дебага
+```php
+log()
+```
 
 Полезные ссылки
 -----------------------------------
