@@ -15,13 +15,12 @@ $yxml = new yxml($user = '', $key = '', $cache = false, $cache_dir = '');
 
 ## Методы
 
+**getResult** - получить результаты поиска по запросу $keyword в регионе $geo
 ```php
-**getResult($keyword = '', $geo = 213)**
+getResult($keyword = '', $geo = 213)
 ```
-получить результаты поиска по запросу $keyword в регионе $geo
 * $keyword - ключевое слово (string)
 * $geo - ID региона (int)
----
 
 
 Полезные ссылки
