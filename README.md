@@ -15,7 +15,7 @@ $yxml = new yxml($user = '', $key = '', $cache = true, $cache_dir = '');
 ## Методы
 
 ### getResult ($keyword, $geo)
-Получить результаты поиска по запросу $keyword в регионе $geo__
+Получить результаты поиска по запросу $keyword в регионе $geo
 *Возвращаемое значение - string | bool*
 ```php
 $yxml->getResult($keyword = '', $geo = 213);
@@ -25,7 +25,7 @@ $yxml->getResult($keyword = '', $geo = 213);
 
 
 ### position ($domain, $xml_result)
-Получить позицию домена в поисковой выдаче__
+Получить позицию домена в поисковой выдаче
 *Возвращаемое значение - string | bool*
 ```php
 $yxml->position($domain = '', $xml_result = '');
@@ -35,7 +35,7 @@ $yxml->position($domain = '', $xml_result = '');
 
 
 ### log()
-Получить лог работы класса для дебага__
+Получить лог работы класса для дебага
 *Возвращаемое значение - string*
 ```php
 $yxml->log();
