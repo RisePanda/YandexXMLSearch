@@ -28,7 +28,7 @@ $yxml->getResult($keyword = '', $geo = 213);
 
 
 ### position ($domain, $xml_result)
-Получить позицию домена в поисковой выдаче
+Получить позицию домена $domain в поисковой выдаче $xml_result. По умолчанию используется последний поисковый результат если отсутствует $xml_result.
 ```php
 $yxml->position($domain = '', $xml_result = '');
 ```
