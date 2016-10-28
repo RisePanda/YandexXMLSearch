@@ -88,6 +88,7 @@ class yxml {
                 // Load cache
                 $this->addLog('Loading from cache: "' . $file . '"');
                 $res = file_get_contents($file);
+                $this->xml_result = $res;
                 return $res;
 
             } else {
