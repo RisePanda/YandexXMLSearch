@@ -8,20 +8,23 @@ $yxml = new yxml($user = '', $key = '', $cache = false, $cache_dir = '');
 
 ## Параметры:
 
-**$user** - имя пользователя (string)
-**$key** - ключ пользователя (string)
-**$cache** - необходимо ли кэширование запросов к XML (bool)
-**$cache_dir** - директория для размещения файлов кэша (string)
+* **$user** - имя пользователя (string)
+* **$key** - ключ пользователя (string)
+* **$cache** - необходимо ли кэширование запросов к XML (bool)
+* **$cache_dir** - директория для размещения файлов кэша (string)
 
 ## Методы
 
-**getResult($keyword = '', $geo = 213)** - получить результаты поиска по запросу $keyword в регионе $geo
-$keyword - ключевое слово
-$geo - ID региона
+```php
+**getResult($keyword = '', $geo = 213)**
+```
+получить результаты поиска по запросу $keyword в регионе $geo
+* $keyword - ключевое слово (string)
+* $geo - ID региона (int)
 ---
 
 
 Полезные ссылки
 -----------------------------------
-[Яндекс XML](http://xml.yandex.ru/)
-[Список регионов и их ID](https://yandex.ru/yaca/geo.c2n)
+* [Яндекс XML](http://xml.yandex.ru/)
+* [Список регионов и их ID](https://yandex.ru/yaca/geo.c2n)
