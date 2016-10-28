@@ -7,11 +7,10 @@ $yxml = new yxml($user = '', $key = '', $cache = true, $cache_dir = '');
 ```
 
 ## Параметры:
-
-* **$user** - имя пользователя (string)
-* **$key** - ключ пользователя (string)
-* **$cache** - необходимо ли кэширование запросов к XML (bool)
-* **$cache_dir** - директория для размещения файлов кэша (string)
+* **$user** - имя пользователя *(string)*
+* **$key** - ключ пользователя *(string)*
+* **$cache** - необходимо ли кэширование запросов к XML *(bool)*
+* **$cache_dir** - директория для размещения файлов кэша *(string)*
 
 ## Методы
 
@@ -20,22 +19,25 @@ $yxml = new yxml($user = '', $key = '', $cache = true, $cache_dir = '');
 ```php
 $yxml->getResult($keyword = '', $geo = 213);
 ```
-* $keyword - ключевое слово (string)
-* $geo - ID региона (int)
+* **$keyword** - ключевое слово *(string)*
+* **$geo** - ID региона *(int)*
+Возвращаемое значение string | bool
 
 ### position
 Получить позицию домена в поисковой выдаче
 ```php
 $yxml->position($domain = '', $xml_result = '');
 ```
-* $domain - имя домена (string)
-* $xml_result - кастомный xml результат (string)
+* **$domain** - имя домена *(string)*
+* **$xml_result** - кастомный xml результат *(string)*
+Возвращаемое значение string | bool
 
 ### log
 Получить лог работы класса для дебага
 ```php
 $yxml->log();
 ```
+Возвращаемое значение string
 
 ## TODO
 * Получение кол-ва доступных лимитов
