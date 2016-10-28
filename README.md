@@ -15,14 +15,14 @@ $yxml = new yxml($user = '', $key = '', $cache = true, $cache_dir = '');
 ## Методы
 
 ### getResult ($keyword, $geo)
-Получить результаты поиска по запросу $keyword в регионе $geo
-```php
-$yxml->getResult($keyword = '', $geo = 213);
-```
-* **$keyword** - ключевое слово *(string)*
-* **$geo** - ID региона *(int)*
+    Получить результаты поиска по запросу $keyword в регионе $geo
+    ```php
+    $yxml->getResult($keyword = '', $geo = 213);
+    ```
+    * **$keyword** - ключевое слово *(string)*
+    * **$geo** - ID региона *(int)*
 
-Возвращаемое значение *string | bool*
+    Возвращаемое значение *string | bool*
 
 
 ### position ($domain, $xml_result)
