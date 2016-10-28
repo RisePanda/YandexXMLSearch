@@ -29,7 +29,7 @@ $yxml->getResult($keyword = '', $geo = 213);
 $yxml->position($domain = '', $xml_result = '');
 ```
 * $domain - имя домена (string)
-* $xml_result - кастомный xml результат
+* $xml_result - кастомный xml результат (string)
 
 ### log
 Получить лог работы класса для дебага
