@@ -21,6 +21,7 @@ $yxml->getResult($keyword = '', $geo = 213);
 ```
 * **$keyword** - ключевое слово *(string)*
 * **$geo** - ID региона *(int)*
+
 Возвращаемое значение *string | bool*
 
 
@@ -31,6 +32,7 @@ $yxml->position($domain = '', $xml_result = '');
 ```
 * **$domain** - имя домена *(string)*
 * **$xml_result** - кастомный xml результат *(string)*
+
 Возвращаемое значение *string | bool*
 
 
@@ -39,6 +41,7 @@ $yxml->position($domain = '', $xml_result = '');
 ```php
 $yxml->log();
 ```
+
 Возвращаемое значение *string*
 
 
